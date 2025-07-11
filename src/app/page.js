@@ -4,6 +4,9 @@ import styles from "./page.module.css";
 export default function Home() {
   return (
     <div className={styles.page}>
+      <div className={styles.myTitle}>
+        <h1>Simple To-Do</h1>
+      </div>
       <div className="header">
         <h1>This is a page</h1>
         <p> Welcome to the simple to-do. Remove the clutter and plan out your day.

@@ -16,6 +16,10 @@
   font-family: var(--font-geist-sans);
 }
 
+.myTitle{
+  font-size: xx-large;
+  font-family: var(--font-newsreader);
+}
 .lists{
   font-size: x-large;
 }
