@@ -1,5 +1,9 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import { allTodos, addTask, updateTask, deleteTask } from './api';
+
+const tasks = await allTodos();
+console.log(tasks);
 
 export default function Home() {
   return (

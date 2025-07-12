@@ -19,13 +19,17 @@
 .myTitle{
   font-size: xx-large;
   font-family: var(--font-newsreader);
+  font-style: italic;
 }
+
 .lists{
   font-size: x-large;
+  font-family: var(--font-red-hat-mono);
 }
 
 .striked{
   font-size: x-large;
   font-style: italic;
+  font-family: var(--font-red-hat-mono);
   color: #BF8B85;
 }
