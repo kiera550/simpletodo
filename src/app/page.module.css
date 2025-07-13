@@ -7,7 +7,7 @@
   --button-secondary-hover: #f2f2f2;
 
   display: grid;
-  grid-template-rows: 20px 1fr 20px;
+  /* grid-template-rows: 20px 1fr 20px; */
   align-items: center;
   justify-items: center;
   min-height: 50svh;
@@ -20,6 +20,14 @@
   font-size: xx-large;
   font-family: var(--font-newsreader);
   font-style: italic;
+  margin-bottom: -40px;
+}
+
+.myDesc{
+  font-size: large;
+  font-family: var(--font-geist-mono);
+  margin-bottom: 10px;
+  font-weight: 300;
 }
 
 .lists{
@@ -28,6 +36,10 @@
   background-color: #577590;
   /* padding: 20px; */
   margin: 20px, 30px, 20px, 30px;
+  grid-column-start: 3;
+  grid-column-end: 6;
+  grid-row: 4 / span 7;
+
 }
 
 .striked{

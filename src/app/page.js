@@ -2,7 +2,7 @@
 import styles from "./page.module.css";
 import { useState, useEffect } from "react";
 import { allTodos, addTask, updateTask, deleteTask } from './api';
-
+import { ToastContainer, toast } from 'react-toastify';
 
 
 export default function Home() {
@@ -12,7 +12,7 @@ export default function Home() {
   useEffect(() => {
     allTodos().then(setTasks);
   }, []);
-
+  // handles
   const handleAdd = async () => {
     if (!newTitle.trim()) return;
     const task = await addTask({ title: newTitle, completed: false });
@@ -35,26 +35,26 @@ export default function Home() {
     try {
       await deleteTask(id);
       setTasks((prev) => prev.filter((t) => t.id !== id));
+
     } catch (error) {
       console.error('Failed to delete task:', error);
     }
   };
+
   return (
     <div className={styles.page}>
       <div className={styles.myTitle}>
         <h1>Simple To-Do</h1>
       </div>
-      <div className="header">
+      <div className={styles.myDesc}>
         <h1>This is a page</h1>
-        <p> Welcome to the simple to-do. Remove the clutter and plan out your day.
-          This is my testing static page :P
-        </p>
-
-       <input value={newTitle}
+        <p> Welcome to the simple to-do. Please add your tasks in the input field below! </p>
+        <div>
+          <input value={newTitle}
         onChange={(e) => setNewTitle(e.target.value)}
         placeholder="New Task..." />
         <button onClick={handleAdd}>Add</button>
-
+        </div>
       </div>
       <div className="Lists">
         <ul>
@@ -69,6 +69,7 @@ export default function Home() {
                 {task.title}
               </label>
               <button onClick={() => handleDelete(task.id)}>Delete</button>
+
             </li>
           ))}
         </ul>
