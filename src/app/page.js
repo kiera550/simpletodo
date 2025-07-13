@@ -56,7 +56,7 @@ export default function Home() {
         <button onClick={handleAdd}>Add</button>
 
       </div>
-      <div className="lists">
+      <div className={styles.lists}>
         <ul>
           {tasks.map((task)=>(
             <li key={task.id}>

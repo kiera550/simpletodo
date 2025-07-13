@@ -25,6 +25,9 @@
 .lists{
   font-size: x-large;
   font-family: var(--font-red-hat-mono);
+  background-color: #577590;
+  /* padding: 20px; */
+  margin: 20px, 30px, 20px, 30px;
 }
 
 .striked{
@@ -32,4 +35,5 @@
   font-style: italic;
   font-family: var(--font-red-hat-mono);
   color: #BF8B85;
+  background-color: #577590;
 }
